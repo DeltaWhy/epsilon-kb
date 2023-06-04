@@ -28,4 +28,4 @@ epsilon-kb-gerbers.zip: gerbers
 	zip -r $@ $<
 
 %.svg: gerbers
-	npx @tracespace/cli -L gerbers/* -b.color.sm="rgba(00,00,00,0.85)" -b.outlineGapFill=0.01
+	npx @tracespace/cli -L gerbers/*{Cuts,Cu,Mask,Paste,Silkscreen,.drl}* -b.color.sm="rgba(00,00,00,0.85)" -b.outlineGapFill=0.01
